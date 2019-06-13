@@ -2,10 +2,14 @@
 
 {% block content %}
 
-    <div>
-        <h1>Home</h1>
-        <a href="{% url 'news' %}">News</a>
-        <a href="{% url 'launch' %}">Launches</a>
+    <h1>Home</h1>
+    <div class="main">
+        <div class="news">
+            <a href="{% url 'news' %}">News</a>
+        </div>
+        <div class="launch">
+            <a href="{% url 'launch' %}">Launches</a>
+        </div>
     </div>
     <div>
         <a href="{% url 'add_news' %}">Add News Event</a>

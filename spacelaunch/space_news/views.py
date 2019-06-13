@@ -9,3 +9,9 @@ def news(request):
 
 def launch(request):
     return render(request, "space_news/launch_archive.html")
+
+def add_news(request):
+    return render(request, "space_news/add_news.html")
+
+def add_launch(request):
+    return render(request, "space_news/add_launch.html")
