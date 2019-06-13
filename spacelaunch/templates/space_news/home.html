@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+        <h1>Home</h1>
+        <a href="{% url 'news' %}">News</a>
+        <a href="{% url 'launch' %}">Launches</a>
+    </div>
+    <div>
+        <a href="{% url 'add_news' %}">Add News Event</a>
+        <a href="{% url 'add_launch' %}">Add Launch Event</a>
+    </div>
+
+{% endblock content %}
