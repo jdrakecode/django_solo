@@ -5,15 +5,45 @@
     <h1>Home</h1>
     <div class="main">
         <div class="news-col">
-            <div class="news">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eligendi quis temporibus recusandae rem asperiores? Autem, cumque minus impedit nemo aut natus dolor esse minima nulla dolore. Ipsam, dignissimos similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eligendi sit, similique ipsa maiores voluptatem laudantium temporibus, sunt numquam debitis unde! Modi quae tempore vitae quasi aspernatur ab nam autem!</p>
-            </div>
-            <div class="news">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque corporis accusamus aliquam illo sed veniam voluptates delectus ratione amet, eos soluta temporibus nam ipsum odio, dolor harum, quod magnam quia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tenetur reprehenderit explicabo adipisci velit culpa assumenda ea debitis neque odio quibusdam dolore quisquam enim doloremque illo, consequatur sed architecto ex?</p>
+            <div class="news-event">
+                <div class="date-name" id="news-date">
+                    <p>June 14, 2019 | Headline</p>
+                </div>
+                <div class="content">
+                    <div class="news-img"></div>
+                    <div class="news-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore corrupti sequi ut unde enim odio qui ipsum. Culpa alias, ipsa reiciendis, obcaecati neque qui ratione nobis iste deleniti quo sequi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique alias dolorum laboriosam at provident nostrum accusantium aperiam sit eius distinctio voluptate, beatae libero nesciunt quod fugiat aspernatur. Voluptas, facere nostrum!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, repudiandae? Suscipit magnam fuga rem, quam minus molestiae sunt facere autem facilis officia quibusdam! Maiores deleniti natus, alias molestias quas consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, consequatur, inventore similique voluptate accusantium excepturi aliquid veniam aut at quod veritatis architecto nobis velit ad quibusdam voluptatem quam dolore eos!</p>
+                    </div>
+                </div>
             </div>
             <a href="{% url 'news' %}">News</a>
         </div>
-        <div class="launch-col">
+        <div class="news-col">
+            <div class="launch-event">
+                <div class="date-name">
+                    <p>June 14, 2019 | Name - Payload</p>
+                </div>
+                <div class="data">
+                    <p><strong>Launch Time: </strong>00:00</p>
+                    <p><strong>Launch Site: </strong>KSC</p>
+                </div>
+                <div class="description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore commodi voluptatum, dolore architecto enim in perferendis nemo quibusdam, obcaecati atque dolor ratione, libero eius doloremque adipisci. Dignissimos cum est quam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere sequi qui quod iusto necessitatibus deleniti ut aliquam amet dicta ratione, delectus, eveniet nobis ex quis. Saepe reprehenderit eveniet eum illo.</p>
+                </div>
+            </div>
+            <div class="launch-event">
+                <div class="date-name">
+                    <p>June 13, 2019 | Name - Payload</p>
+                </div>
+                <div class="data">
+                    <p><strong>Launch Time: </strong>00:00</p>
+                    <p><strong>Launch Site: </strong>KSC</p>
+                </div>
+                <div class="description">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere sequi qui quod iusto necessitatibus deleniti ut aliquam amet dicta ratione, delectus, eveniet nobis ex quis. Saepe reprehenderit eveniet eum illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut deserunt architecto, corrupti dolores reprehenderit tenetur, nulla nisi mollitia nemo beatae corporis voluptatibus impedit velit eaque optio rerum dignissimos neque at!</p>
+                </div>
+            </div>
             <a href="{% url 'launch' %}">Launches</a>
         </div>
     </div>

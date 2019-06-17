@@ -6,14 +6,14 @@
     <a href="{% url 'home' %}">Go Back</a>
     <div class="launch-event">
         <div class="date-name">
-            <p>June 14, 2019 | Name - Payload</p>
+            <p>{{ date }} | {{ name }} - {{ payload }}</p>
         </div>
         <div class="data">
-            <p><strong>Launch Time: </strong>00:00</p>
-            <p><strong>Launch Site: </strong>KSC</p>
+            <p><strong>Launch Time: </strong>{{ time }}</p>
+            <p><strong>Launch Site: </strong>{{ site }}</p>
         </div>
         <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore commodi voluptatum, dolore architecto enim in perferendis nemo quibusdam, obcaecati atque dolor ratione, libero eius doloremque adipisci. Dignissimos cum est quam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere sequi qui quod iusto necessitatibus deleniti ut aliquam amet dicta ratione, delectus, eveniet nobis ex quis. Saepe reprehenderit eveniet eum illo.</p>
+            <p>{{ description }}</p>
         </div>
     </div>
     <div class="launch-event">

@@ -4,5 +4,37 @@
 
     <h1>Add Launch Event</h1>
     <a href="{% url 'home' %}">Go Back</a>
+    <div>
+        <form class="add-form" action="{% url 'add_launch' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="date">Date of Event</label>
+                <input name="date" type="text" class="form-control" placeholder="ex: May 11, 2019">
+            </div>
+            <div class="form-group">
+                <label for="name">Rocket Name</label>
+                <input name="name" type="text" class="form-control" placeholder="ex: Saturn V">
+            </div>
+            <div class="form-group">
+                <label for="payload">Payload</label>
+                <input name="payload" type="text" class="form-control" placeholder="ex: Skylab">
+            </div>
+            <div class="form-group">
+                <label for="time">Time of Launch</label>
+                <input name="time" type="text" class="form-control" placeholder="ex: 1630 GMT">
+            </div>
+            <div class="form-group">
+                <label for="site">Launch Site</label>
+                <input name="site" type="text" class="form-control" placeholder="ex: Kennedy Space Center">
+            </div>
+            <div class="form-group">
+                <label for="description">Description of Launch Event</label>
+                <input name="description" type="text" class="form-control" placeholder="A description of the launch.">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="form_submit">
+            </div>
+        </form>
+    </div>
 
 {% endblock content %}

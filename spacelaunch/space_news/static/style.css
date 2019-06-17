@@ -8,21 +8,18 @@ body {
 }
 
 .news-col {
-    /* max-width: 50%; */
-    /* height: 500px; */
     background-color: black;
     flex: 0 0 50%;
     display: flex;
     flex-wrap: wrap;
 }
 
-.launch-col {
-    /* max-width: 50%; */
+/* .launch-col {
     background-color: blue;
     flex: 0 0 50%;
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 /* .news-event {
     background-color: lightgrey;
