@@ -4,7 +4,7 @@ from django.db import models
 
 class News(models.Model):
     title = models.CharField(max_length=50)
-    date = models.CharField(max_length=50)
+    date = models.DateField()
     headline = models.CharField(max_length=50)
     info = models.CharField(max_length=1500)
 
@@ -12,7 +12,7 @@ class News(models.Model):
         return self.name
 
 class Launches(models.Model):
-    date = models.CharField(max_length=50)
+    date = models.DateField()
     name = models.CharField(max_length=50)
     payload = models.CharField(max_length=50)
     time = models.CharField(max_length=50)

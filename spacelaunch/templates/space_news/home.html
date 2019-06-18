@@ -20,30 +20,35 @@
             <a href="{% url 'news' %}">News</a>
         </div>
         <div class="news-col">
-            <div class="launch-event">
-                <div class="date-name">
-                    <p>June 14, 2019 | Name - Payload</p>
+            {% if other_launches %}
+                {% for i in other_launches %}
+                    <div class="launch-event">
+                        <div class="date-name">
+                            <p>{{ i.date }} | {{ i.name }} - {{ i.payload }}</p>
+                        </div>
+                        <div class="data">
+                            <p><strong>Launch Time: </strong>{{ i.time }}</p>
+                            <p><strong>Launch Site: </strong>{{ i.site }}</p>
+                        </div>
+                        <div class="description">
+                            <p>{{ i.description }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="launch-event">
+                    <div class="date-name">
+                        <p>No Event</p>
+                    </div>
+                    <div class="data">
+                        <p><strong>Launch Time: </strong>-</p>
+                        <p><strong>Launch Site: </strong>-</p>
+                    </div>
+                    <div class="description">
+                        <p>No Description</p>
+                    </div>
                 </div>
-                <div class="data">
-                    <p><strong>Launch Time: </strong>00:00</p>
-                    <p><strong>Launch Site: </strong>KSC</p>
-                </div>
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore commodi voluptatum, dolore architecto enim in perferendis nemo quibusdam, obcaecati atque dolor ratione, libero eius doloremque adipisci. Dignissimos cum est quam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere sequi qui quod iusto necessitatibus deleniti ut aliquam amet dicta ratione, delectus, eveniet nobis ex quis. Saepe reprehenderit eveniet eum illo.</p>
-                </div>
-            </div>
-            <div class="launch-event">
-                <div class="date-name">
-                    <p>June 13, 2019 | Name - Payload</p>
-                </div>
-                <div class="data">
-                    <p><strong>Launch Time: </strong>00:00</p>
-                    <p><strong>Launch Site: </strong>KSC</p>
-                </div>
-                <div class="description">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere sequi qui quod iusto necessitatibus deleniti ut aliquam amet dicta ratione, delectus, eveniet nobis ex quis. Saepe reprehenderit eveniet eum illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut deserunt architecto, corrupti dolores reprehenderit tenetur, nulla nisi mollitia nemo beatae corporis voluptatibus impedit velit eaque optio rerum dignissimos neque at!</p>
-                </div>
-            </div>
+            {% endif %}
             <a href="{% url 'launch' %}">Launches</a>
         </div>
     </div>
