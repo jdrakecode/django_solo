@@ -45,14 +45,14 @@ def add_news(request):
     if request.method == "POST":
         new_news = News(date=request.POST["date"], name=request.POST["name"], info=request.POST["info"])
         new_news.save()
-        return redirect("add_news")
+        return redirect("news")
     return render(request, "space_news/add_news.html")
 
 def add_launch(request):
     if request.method == "POST":
         new_launch = Launches(date=request.POST["date"], name=request.POST["name"], payload=request.POST["payload"], time=request.POST["time"], site=request.POST["site"], description=request.POST["description"])
         new_launch.save()
-        return redirect("add_launch")
+        return redirect("launch")
     return render(request, "space_news/add_launch.html")
 
 def delete_news(request):
@@ -62,3 +62,37 @@ def delete_news(request):
         return redirect("news")
     return redirect("news")
 
+def delete_launch(request):
+    if request.method == "POST":
+        to_delete = Launches.objects.get(id=request.POST["id"])
+        to_delete.delete()
+        return redirect("launch")
+    return redirect("launch")
+
+def update_news(request, id):
+    to_update = News.objects.get(id=id)
+    if request.method == "POST":
+        for key, value in request.POST.items():
+            if value and key != "csrfauthenticationtoken":
+                setattr(to_update, key, value)
+                to_update.save()
+        return redirect("news")
+    context = {
+        "id": id,
+        "update": to_update
+    }
+    return render(request, "space_news/update_news.html", context=context)
+
+def update_launch(request, id):
+    to_update = Launches.objects.get(id=id)
+    if request.method == "POST":
+        for key, value in request.POST.items():
+            if value and key != "csrfauthenticationtoken":
+                setattr(to_update, key, value)
+                to_update.save()
+        return redirect("launch")
+    context = {
+        "id": id,
+        "update": to_update
+    }
+    return render(request, "space_news/update_launch.html", context=context)

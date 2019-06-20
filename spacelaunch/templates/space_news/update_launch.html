@@ -2,10 +2,10 @@
 
 {% block content %}
 
-    <h1>Add Launch Event</h1>
-    <a href="{% url 'home' %}">Go Back</a>
+    <h1>Update News Event</h1>
+    <a href="{% url 'launch' %}">Go Back</a>
     <div>
-        <form class="add-form" action="{% url 'add_launch' %}" method="POST">
+        <form class="add-form" action="{% url 'update_launch' id %}" method="POST">
             {% csrf_token %}
             <div class="form-group">
                 <label for="date">Date of Event</label>
@@ -13,23 +13,23 @@
             </div>
             <div class="form-group">
                 <label for="name">Rocket Name</label>
-                <input name="name" type="text" class="form-control" placeholder="ex: Saturn V">
+                <input name="name" type="text" class="form-control" placeholder="{{ update.name }}">
             </div>
             <div class="form-group">
                 <label for="payload">Payload</label>
-                <input name="payload" type="text" class="form-control" placeholder="ex: Skylab">
+                <input name="payload" type="text" class="form-control" placeholder="{{ update.payload }}">
             </div>
             <div class="form-group">
                 <label for="time">Time of Launch (GMT)</label>
-                <input name="time" type="text" class="form-control" placeholder="ex: 1630">
+                <input name="time" type="text" class="form-control" placeholder="{{ update.time }}">
             </div>
             <div class="form-group">
                 <label for="site">Launch Site</label>
-                <input name="site" type="text" class="form-control" placeholder="ex: Kennedy Space Center">
+                <input name="site" type="text" class="form-control" placeholder="{{ update.site }}">
             </div>
             <div class="form-group">
                 <label for="description">Description of Launch Event</label>
-                <input name="description" type="text" class="form-control" placeholder="A description of the launch.">
+                <input name="description" type="text" class="form-control" placeholder="{{ update.description }}">
             </div>
             <div class="form-group">
                 <input type="submit" class="form_submit">

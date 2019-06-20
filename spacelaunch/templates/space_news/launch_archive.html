@@ -11,11 +11,17 @@
                     <p>{{ i.date }} | {{ i.name }} - {{ i.payload }}</p>
                 </div>
                 <div class="data">
-                    <p><strong>Launch Time: </strong>{{ i.time }}</p>
+                    <p><strong>Launch Time: </strong>{{ i.time }} GMT</p>
                     <p><strong>Launch Site: </strong>{{ i.site }}</p>
                 </div>
                 <div class="description">
                     <p>{{ i.description }}</p>
+                    <form action="{% url 'delete_launch' %}" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="id" value="{{ i.id }}">
+                        <input type="submit" value="Delete">
+                    </form>
+                    <a href="{% url 'update_launch' i.id %}">Update Launch Event</a>
                 </div>
             </div>
         {% endfor %}

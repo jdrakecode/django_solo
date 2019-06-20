@@ -19,6 +19,7 @@
                             <input type="hidden" name="id" value="{{ i.id }}">
                             <input type="submit" value="Delete">
                         </form>
+                        <a href="{% url 'update_news' i.id %}">Update News Event</a>
                     </div>
                 </div>
             </div>
