@@ -1,18 +1,33 @@
 body {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
 }
 
-.main {
+.header {
+    /* background-color: white; */
+    content
+}
+
+.header h1 {
+    color: white;
+    background: url("img/star_background.jpg");
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 20%;
+    font-size: 3vmax;
+}
+
+/* .main {
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
-.news-col {
+/* .news-col {
     background-color: black;
     flex: 0 0 50%;
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 /* .launch-col {
     background-color: blue;
@@ -27,10 +42,15 @@ body {
     flex-wrap: wrap;
 } */
 
+.news-event {
+    height: 465px;
+}
+
 .content {
     background-color: lightgrey;
     display: flex;
     flex-wrap: wrap;
+    height: 400px;
 }
 
 #news-date p {
@@ -65,5 +85,6 @@ body {
 
 .date-name p {
     font-size: 2vmax;
+    /* font-size: 40px; */
 }
 

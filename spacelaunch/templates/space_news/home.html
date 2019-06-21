@@ -2,9 +2,11 @@
 
 {% block content %}
 
-    <h1>Home</h1>
-    <div class="main">
-        <div class="news-col">
+    <div class="header">
+        <h1><strong>Space Launch News</strong></h1>
+    </div>
+    <div class="row">
+        <div class="col-6">
             {% if news %}
                 {% for i in news %}
                     <div class="news-event">
@@ -35,7 +37,7 @@
             {% endif %}
             <a href="{% url 'news' %}">News</a>
         </div>
-        <div class="news-col">
+        <div class="col-6">
             {% if other_launches %}
                 {% for i in other_launches %}
                     <div class="launch-event">
