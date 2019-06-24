@@ -2,8 +2,22 @@
 
 {% block content %}
 
-    <h1>Add Launch Event</h1>
-    <a href="{% url 'home' %}">Go Back</a>
+    <div class="header">
+        <div class="shdr">
+            <h1><strong>Add Launch Event</strong></h1>
+        </div>
+        <div class="shdr" id="news_link">
+            <div class="btn_margin">
+                <a href="{% url 'home' %}">Home Page</a>
+            </div>
+        </div>
+        <div class="shdr" id="launch_link">
+            <div class="btn_margin">
+                <a href="{% url 'launch' %}">Launch Log</a>
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
     <div>
         <form class="add-form" action="{% url 'add_launch' %}" method="POST">
             {% csrf_token %}

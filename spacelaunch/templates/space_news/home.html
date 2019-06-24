@@ -3,8 +3,21 @@
 {% block content %}
 
     <div class="header">
-        <h1><strong>Space Launch News</strong></h1>
+        <div class="shdr">
+            <h1><strong>Space Launch News</strong></h1>
+        </div>
+        <div class="shdr" id="news_link">
+            <div class="btn_margin">
+                <a href="{% url 'news' %}">News Archive</a>
+            </div>
+        </div>
+        <div class="shdr" id="launch_link">
+            <div class="btn_margin">
+                <a href="{% url 'launch' %}">Launch Log</a>
+            </div>
+        </div>
     </div>
+    <div class="spacer"></div>
     <div class="row">
         <div class="col-6">
             {% if news %}
@@ -35,7 +48,6 @@
                     </div>
                 </div>
             {% endif %}
-            <a href="{% url 'news' %}">News</a>
         </div>
         <div class="col-6">
             {% if other_launches %}
@@ -45,7 +57,7 @@
                             <p>{{ i.date }} | {{ i.name }} - {{ i.payload }}</p>
                         </div>
                         <div class="data">
-                            <p><strong>Launch Time: </strong>{{ i.time }}</p>
+                            <p><strong>Launch Time: </strong>{{ i.time }} GMT</p>
                             <p><strong>Launch Site: </strong>{{ i.site }}</p>
                         </div>
                         <div class="description">
@@ -67,12 +79,7 @@
                     </div>
                 </div>
             {% endif %}
-            <a href="{% url 'launch' %}">Launches</a>
         </div>
-    </div>
-    <div>
-        <a href="{% url 'add_news' %}">Add News Event</a>
-        <a href="{% url 'add_launch' %}">Add Launch Event</a>
     </div>
 
 {% endblock content %}

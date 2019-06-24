@@ -2,8 +2,22 @@
 
 {% block content %}
 
-    <h1>News Archive</h1>
-    <a href="{% url 'home' %}">Go Back</a>
+    <div class="header">
+        <div class="shdr">
+            <h1><strong>News Archive</strong></h1>
+        </div>
+        <div class="shdr" id="news_link">
+            <div class="btn_margin">
+                <a href="{% url 'home' %}">Home Page</a>
+            </div>
+        </div>
+        <div class="shdr" id="launch_link">
+            <div class="btn_margin">
+                <a href="{% url 'add_news' %}">Add News Event</a>
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
     {% if news %}
         {% for i in news %}
             <div class="news-event">
@@ -19,6 +33,7 @@
                             <input type="hidden" name="id" value="{{ i.id }}">
                             <input type="submit" value="Delete">
                         </form>
+                        <br>
                         <a href="{% url 'update_news' i.id %}">Update News Event</a>
                     </div>
                 </div>
