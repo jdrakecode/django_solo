@@ -3,9 +3,70 @@ body {
     background-color: black;
 }
 
+form {
+    color: lightgrey;
+}
+
+a:link {
+    background-color: black;
+    font-size: 1.1vmax;
+    text-decoration: none;
+    color: darkred;
+    padding: 5px;
+    border-color: darkred;
+    border-style: outset;
+    border-width: 10px;
+}
+
+a:visited {
+    color: darkred;
+}
+
+a:hover {
+    background-color: rgb(20, 20, 20);
+    color: red;
+    border-color: red;
+}
+
+a:active {
+    border-style: inset;
+}  
+
+.col-6 {
+    flex: 0 0 49.9%;
+    max-width: 49.9%;
+}
+
 .header {
-    /* background-color: white; */
-    content
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn_margin {
+    margin: 10px;
+}
+
+.spacer {
+    height: 5vmax;
+}
+
+.shdr {
+    text-align: center;
+    flex: 0 0 49.9%;
+    max-width: 49.9%;    
+}
+
+#news_link {
+    max-width: 24.95%;
+}
+
+#launch_link {
+    max-width: 24.95%;    
 }
 
 .header h1 {
@@ -15,32 +76,8 @@ body {
     -webkit-text-fill-color: transparent;
     background-size: 20%;
     font-size: 3vmax;
+    font-family: 'Righteous', cursive;
 }
-
-/* .main {
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-/* .news-col {
-    background-color: black;
-    flex: 0 0 50%;
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-/* .launch-col {
-    background-color: blue;
-    flex: 0 0 50%;
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-/* .news-event {
-    background-color: lightgrey;
-    display: flex;
-    flex-wrap: wrap;
-} */
 
 .news-event {
     height: 465px;
@@ -87,4 +124,29 @@ body {
     font-size: 2vmax;
     /* font-size: 40px; */
 }
+
+/* .main {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* .news-col {
+    background-color: black;
+    flex: 0 0 50%;
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* .launch-col {
+    background-color: blue;
+    flex: 0 0 50%;
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* .news-event {
+    background-color: lightgrey;
+    display: flex;
+    flex-wrap: wrap;
+} */
 

@@ -15,7 +15,7 @@ def index(request):
         multi_launch = multi_launch[::-1]
     
     context = {
-        "other_launches": multi_launch[0:2],
+        "other_launches": multi_launch[0:3],
         "news": my_news[0:2],
     }
     return render(request, "space_news/home.html", context=context)
