@@ -8,29 +8,54 @@ form {
 }
 
 a:link {
-    background-color: black;
+    background-color: rgb(20, 20, 20);
     font-size: 1.1vmax;
     text-decoration: none;
-    color: darkred;
+    color: red;
     padding: 5px;
-    border-color: darkred;
+    border-color: red;
     border-style: outset;
     border-width: 10px;
+    box-shadow: 0px 0px 30px red;
+    border-radius: 40%;
+    transition-duration: 0.9s;
 }
 
 a:visited {
-    color: darkred;
+    color: red;
 }
 
 a:hover {
-    background-color: rgb(20, 20, 20);
-    color: red;
-    border-color: red;
+    background-color: black;
+    color: darkred;
+    border-color: darkred;
+    box-shadow: 0px 0px 10px darkred;
 }
 
 a:active {
     border-style: inset;
-}  
+}
+
+.button {
+    background-color: rgb(20, 20, 20);
+    font-size: 1.1vmax;
+    text-decoration: none;
+    color: red;
+    padding: 5px;
+    border-color: red;
+    border-style: outset;
+    border-width: 10px;
+    box-shadow: 0px 0px 30px red;
+    border-radius: 40%;
+    transition-duration: 0.9s;
+}
+
+.button:hover {
+    background-color: black;
+    color: darkred;
+    border-color: darkred;
+    box-shadow: 0px 0px 10px darkred;
+}
 
 .col-6 {
     flex: 0 0 49.9%;
@@ -124,29 +149,3 @@ a:active {
     font-size: 2vmax;
     /* font-size: 40px; */
 }
-
-/* .main {
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-/* .news-col {
-    background-color: black;
-    flex: 0 0 50%;
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-/* .launch-col {
-    background-color: blue;
-    flex: 0 0 50%;
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-/* .news-event {
-    background-color: lightgrey;
-    display: flex;
-    flex-wrap: wrap;
-} */
-
