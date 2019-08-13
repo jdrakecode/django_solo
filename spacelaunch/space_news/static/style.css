@@ -7,6 +7,10 @@ form {
     color: lightgrey;
 }
 
+.row {
+    width: 100%;
+}
+
 a:link {
     background-color: rgb(20, 20, 20);
     font-size: 1.1vmax;
