@@ -110,6 +110,7 @@ a:active {
 
 .news-event {
     height: 465px;
+    margin-left: 15px;
 }
 
 .content {
@@ -132,6 +133,7 @@ a:active {
 
 .news-txt {
     flex: 0 0 50%;
+    padding: 5px;
 }
 
 .launch-event {
@@ -151,5 +153,13 @@ a:active {
 
 .date-name p {
     font-size: 2vmax;
-    /* font-size: 40px; */
+    padding: 0px 5px;
+}
+
+.data {
+    padding: 0px 5px;
+}
+
+.description {
+    padding: 1px 5px;
 }
