@@ -22,7 +22,7 @@ a:link {
     border-width: 10px;
     box-shadow: 0px 0px 30px red;
     border-radius: 40%;
-    transition-duration: 0.9s;
+    /* transition-duration: 0.1s; */
 }
 
 a:visited {
@@ -51,7 +51,7 @@ a:active {
     border-width: 10px;
     box-shadow: 0px 0px 30px red;
     border-radius: 40%;
-    transition-duration: 0.9s;
+    /* transition-duration: 0.1s; */
 }
 
 .button:hover {
