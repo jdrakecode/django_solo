@@ -101,6 +101,7 @@ a:active {
 .header h1 {
     color: white;
     background: url("img/star_background.jpg");
+    background-clip: inherit;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 20%;
