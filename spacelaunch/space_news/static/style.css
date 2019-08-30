@@ -92,10 +92,12 @@ a:active {
 
 #news_link {
     max-width: 24.95%;
+    margin: 0.5% 0;
 }
 
 #launch_link {
     max-width: 24.95%;    
+    margin: 0.5% 0;
 }
 
 .header h1 {
